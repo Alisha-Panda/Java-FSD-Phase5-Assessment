@@ -1,0 +1,33 @@
+#docker version
+sudo docker --version
+sudo docker -v
+
+#docker info
+sudo docker info
+
+#list docker container
+sudo docker container ls (running containers)
+sucdo docker ps -a (all containers)
+
+#listdocker image
+sudo docker images
+
+#list volumes
+sudo docker volume ls
+
+#pull image from docker hub
+sudo docker pull ubuntu
+
+#create/run container
+sudo docker run -it ubuntu /bin/bash
+
+#host website in ubuntu container
+sudo docker run --name webserver -p 80:80 -it ubuntu /bin/bash
+apt update
+apt install apache2 -y
+service apache2 status
+service apache2 start
+service apache2 stop
+apt install git -y
+git clone
+cp -r  /var/www/html

@@ -1,0 +1,27 @@
+#creates jar file
+#create dockerfile
+
+mvn clean install
+
+#build local docker image
+docker build -t fileName .
+
+#check docker images
+docker images
+
+#login
+docker login -u docker-login id
+
+#tag image build
+docker tag localimagename:latest dockerid/repo:imagename
+
+#push docker image
+docker push dockerid/repo:imagename
+
+#create docker container from docker image
+sudo docker run --name webserver -p 80:80 alisha1995/dellfsd:fsd-kitchen-story -it ubuntu /bin/bash
+
+
+
+
+
